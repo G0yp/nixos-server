@@ -42,6 +42,7 @@
         vim
             git
             btop
+            tree
     ];
     programs.zsh = {
         enable = true;
