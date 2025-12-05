@@ -10,7 +10,9 @@ cd "$NIXOS_CONFIG_DIR" || exit
 error_handler() {
     local error_message="$1"
     echo "Error: $error_message"
+    exit 1
 }
+
 if [[ -n $(git status --porcelain) ]]; then
     echo "Commiting local changes first..."
 
