@@ -19,7 +19,6 @@
 		modules = [
 		    ./configuration.nix
 		    ./hosts/docker-nixos/docker-nixos.nix
-		    ./hardware-configuration.nix
 		    ./hosts/vm.nix
 		];
 	    };
