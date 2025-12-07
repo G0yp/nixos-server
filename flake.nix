@@ -11,10 +11,18 @@
                 system = "x86_64-linux";
                 modules = [
                     ./configuration.nix
-                    ./hosts/docker-nixos/docker-nixos.nix
                     ./hosts/lxc.nix
                 ];
             };
+	    nix-containers = nixpkgs.lib.nixosSystem {
+		system = "x86_64-linux";
+		modules = [
+		    ./configuration.nix
+		    ./hosts/docker-nixos/docker-nixos.nix
+		    ./hardware-configuration.nix
+		    ./hosts/vm.nix
+		];
+	    };
         };
     };
 }

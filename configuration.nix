@@ -9,6 +9,8 @@
             PasswordAuthentication = false;
         };
     };
+    networking.firewall.allowedTCPPorts = [22];
+    networking.firewall.enable = true;
 # Cache DNS lookups to improve performance
     services.resolved = {
         extraConfig = ''

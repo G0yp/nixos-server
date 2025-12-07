@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-# networking.HostName = "docker-nixos";
+    networking.hostName = "nix-containers";
     virtualisation.podman = {
         enable = true;
         autoPrune.enable = true;
