@@ -25,4 +25,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Qemu Guest Agent
+  services.qemuGuest.enable = true;
+
 }

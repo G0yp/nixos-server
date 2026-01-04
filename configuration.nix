@@ -45,6 +45,7 @@
             git
             btop
             tree
+            ripgrep
     ];
     programs.zsh = {
         enable = true;
