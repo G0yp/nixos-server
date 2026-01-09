@@ -29,7 +29,7 @@
             shell = pkgs.zsh;
             openssh.authorizedKeys.keys = [
                 "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICr3zofLys716ODhe1HCEdHIWi//qgac+0vZOirsnJGC jake palmer@DJDPB94"
-                "ssh0ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEtQLCWU+XlfiaHQ0w8j9vDdCk0wS6+FwwkWuRC8BUPp goupsoup2@gmail.com"
+                "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEtQLCWU+XlfiaHQ0w8j9vDdCk0wS6+FwwkWuRC8BUPp goupsoup2@gmail.com"
             ];
             extraGroups = ["wheel"];
             isNormalUser = true;
