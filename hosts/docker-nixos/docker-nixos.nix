@@ -22,5 +22,5 @@
         podman-compose
     ];
 
-    networking.firewall.allowedTCPPorts = [5001 5002 5003];
+    networking.firewall.allowedTCPPorts = [5001 5002 5003 5004];
 }
