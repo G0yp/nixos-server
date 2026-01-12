@@ -26,7 +26,7 @@
                 system = "x86_64-linux";
                 modules = [
                     ./configuration.nix
-                    ./hosts/nix-dorm-containers/nix-dorm-containers.nix
+                    ./hosts/nix-dorm-containers/podman-nixos.nix
                     ./hosts/vm.nix
                 ];
             };
