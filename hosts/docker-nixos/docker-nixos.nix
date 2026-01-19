@@ -27,6 +27,6 @@
     fileSystems."/mnt/proxmox-share" = {
         device = "//192.168.2.14/proxmox-smb";
         fsType = "cifs";
-        options = [ "username=proxmox-smb" "password=Xsv4VNXkqwQ3SCjd" "x-systemd.automount" "noauto" ];
+        options = [ "username=proxmox-smb" "password=Xsv4VNXkqwQ3SCjd" "x-systemd.automount" "noauto" "uid=1000" "gid=100" ];
     };
 }
