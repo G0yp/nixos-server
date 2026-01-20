@@ -20,6 +20,7 @@
     environment.systemPackages = with pkgs; [
         podman-tui
         podman-compose
+        podlet
     ];
 
     networking.firewall.allowedTCPPorts = [5001 5002 5003 5004];
