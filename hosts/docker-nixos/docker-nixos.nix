@@ -3,6 +3,8 @@
     imports = [
         ./hardware-configuration.nix
     ];
+    nixpkgs.overlays = [overlays.unstable-packages];
+
     networking.hostName = "nix-containers";
     virtualisation.podman = {
         enable = true;
@@ -19,9 +21,11 @@
     };
     environment.systemPackages = with pkgs; [
         podman-tui
-        podman-compose
-        podlet
-        opencode
+            podman-compose
+            podlet
+    ];
+    environment.systemPackages = with pkgs; [
+        unstable.opencode
     ];
 
     networking.firewall.allowedTCPPorts = [3000 5001 5002 5003 5004];
