@@ -21,6 +21,7 @@
         podman-tui
         podman-compose
         podlet
+        opencode
     ];
 
     networking.firewall.allowedTCPPorts = [3000 5001 5002 5003 5004];
