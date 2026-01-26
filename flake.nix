@@ -25,10 +25,15 @@
                     ./configuration.nix
                     ./hosts/docker-nixos/docker-nixos.nix
                     ./hosts/vm.nix
+                    ({ pkgs, ... }: {
+                        environment.systemPackages = [
+                            opencode.packages.x86_64-linux.default
+                        ];
+                    })
+                        
+                        
                 ];
-                environment.systemPackages = [
-                    opencode.packages.${system}.default
-                ];
+
             };
             nix-dorm-containers = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
