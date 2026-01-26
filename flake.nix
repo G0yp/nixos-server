@@ -4,21 +4,13 @@
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-        nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+        opencode = {
+            url = "github:anomalyco/opencode/v1.1.36";
+            inputs.nixpkgs.follows = "nixpkgs";
+        }
     };
 
-    overlays = {
-        unstable-packages = final: _prev: {
-            unstable = import inputs.nixpkgs-unstable {
-                system = "x86_64-linux";
-                config = {
-                    allowUnfree = true;
-                };
-            };
-        };
-    };
-
-    outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs: {
+    outputs = { self, nixpkgs, opencode, ... }@inputs: {
         nixosConfigurations = {
             nix-testbed = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
@@ -33,6 +25,9 @@
                     ./configuration.nix
                     ./hosts/docker-nixos/docker-nixos.nix
                     ./hosts/vm.nix
+                ];
+                environment.systemPackages = [
+                    opencode.packages.${system}.default
                 ];
             };
             nix-dorm-containers = nixpkgs.lib.nixosSystem {
