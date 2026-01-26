@@ -7,7 +7,7 @@
         opencode = {
             url = "github:anomalyco/opencode/v1.1.36";
             inputs.nixpkgs.follows = "nixpkgs";
-        }
+        };
     };
 
     outputs = { self, nixpkgs, opencode, ... }@inputs: {
