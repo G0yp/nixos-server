@@ -37,6 +37,7 @@
             packages = with pkgs; [
                     eza
                     tealdeer
+                    gcc
             ];
         };
     };
