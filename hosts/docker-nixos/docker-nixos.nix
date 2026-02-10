@@ -24,7 +24,7 @@
             podlet
     ];
 
-    networking.firewall.allowedTCPPorts = [3000 5001 5002 5003 5004];
+    networking.firewall.allowedTCPPorts = [3000 5001 5002 5003 5004 5011 5012];
 
     fileSystems."/mnt/proxmox-share" = {
         device = "//192.168.2.14/proxmox-smb";
