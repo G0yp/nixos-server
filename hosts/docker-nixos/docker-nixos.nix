@@ -4,6 +4,8 @@
         ./hardware-configuration.nix
     ];
 
+    boot.growPartition = true;
+
     networking.hostName = "nix-containers";
     virtualisation.podman = {
         enable = true;
