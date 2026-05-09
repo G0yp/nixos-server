@@ -7,7 +7,7 @@
         nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, opencode, ... }@inputs: {
+    outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs: {
         nixosConfigurations = {
             nix-testbed = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
